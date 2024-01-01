@@ -1,0 +1,53 @@
+{
+  "name": "tailmoji",
+  "displayName": "Tailmoji",
+  "description": "Transform Tailwind CSS classnames into emojis and back",
+  "version": "0.0.2",
+  "publisher": "leonardogrig",
+  "icon": "images/icon.png",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/leonardogrig/tailmoji"
+  },
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.59.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "tailmoji.toggleEmojis",
+        "title": "Toggle Emojis"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "vscode-test"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.59.0",
+    "@types/mocha": "^10.0.6",
+    "@types/node": "18.x",
+    "@typescript-eslint/eslint-plugin": "^6.15.0",
+    "@typescript-eslint/parser": "^6.15.0",
+    "eslint": "^8.56.0",
+    "typescript": "^5.3.3",
+    "@vscode/test-cli": "^0.0.4",
+    "@vscode/test-electron": "^2.3.8"
+  },
+  "keywords": [
+    "tailwindcss",
+    "emoji",
+    "tailwind",
+    "css",
+    "classes"
+  ]
+}
